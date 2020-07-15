@@ -1,0 +1,38 @@
+.section {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "input button";
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+    grid-gap: 5px; 
+    align-items: center;
+}
+
+.section__header {
+    background-color: white;
+    padding: 15px;
+    grid-area: header;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.section__body {
+    background-color: white;
+    padding: 15px;
+}
+
+.section__input {
+    grid-area: input;
+    border: 2px solid #ccc;
+    padding: 10px;
+    
+}
+
+.section__button {
+    color: white;
+    background-color: teal;
+    border: none;
+    grid-area: button;
+    padding: 10px;
+}
