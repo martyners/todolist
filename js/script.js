@@ -19,6 +19,10 @@
         render();
     };
 
+    const resetForm = () => {
+        document.querySelector(".js-form").reset();
+    }
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -26,9 +30,11 @@
         const newTaskContent = document.querySelector(".js-newTaskInput").value.trim();
         if (newTaskContent === "") {
             return;
+        } else {
+            resetForm();
         };
         addNewTask(newTaskContent);
-
+        newTaskElement.focus();
     };
 
 
