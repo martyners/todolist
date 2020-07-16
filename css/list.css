@@ -14,6 +14,12 @@
     flex-grow: 1;
 }
 
+@media (max-width: 767px) {
+    .list__content {
+        flex-wrap: wrap;
+    }
+}
+
 .list__button {
     width: 30px;
     height: 30px;
@@ -23,18 +29,18 @@
 }
 
 .list__button--done {
-    background-color: rgb(0, 87, 0);
+    background-color: hsl(120, 100%, 27%);
 }
 
 .list__button--done:hover {
-    background-color:  rgb(0, 87, 0, 0.7);
+    background-color:  hsl(120, 100%, 37%);
 }
 
 .list__button--remove {
-    background-color: rgb(87, 0, 0);
+    background-color: hsl(0, 100%, 27%);
 }
 
 .list__button--remove:hover {
-    background-color: rgb(87, 0, 0, 0.7);
+    background-color: hsl(0, 100%, 37%);
 }
 
