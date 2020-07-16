@@ -17,6 +17,11 @@
         render();
     };
 
+    const removeTask = (index) => {
+        taskArray.splice(index, 1);
+        render();
+    }
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -33,20 +38,30 @@
         let htmlTaskList = "";
         for (const task of taskArray) {
             htmlTaskList += `
-        <li
+        <li class="list__item"
         ${task.done ? " style=\"text-decoration: line-through\"" : ""}
         >
-            ${task.content}
-        </li>`
+        ${task.content}
+        <button class="list__button js-removeButton">Us
+        </button>    
+        </li> <hr>`
         };
         document.querySelector(".js-tasksList").innerHTML = htmlTaskList;
+
+        const removeButtons = document.querySelectorAll(".js-removeButton");
+
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                removeTask(index);
+            })
+        });
     };
 
     const init = () => {
         render();
 
         const form = document.querySelector(".js-form");
-        
+
         form.addEventListener("submit", onFormSubmit);
     };
 
