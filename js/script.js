@@ -26,7 +26,7 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskElement = document.querySelector(".js-newTaskInput").focus();
+        const newTaskElement = document.querySelector(".js-newTaskInput");
         const newTaskContent = document.querySelector(".js-newTaskInput").value.trim();
         if (newTaskContent === "") {
             return;
@@ -36,7 +36,6 @@
         addNewTask(newTaskContent);
         newTaskElement.focus();
     };
-
 
     const render = () => {
         let htmlTaskList = "";
@@ -65,7 +64,7 @@
 
         const toggleDone = document.querySelectorAll(".js-doneButton");
 
-        toggleDone.forEach((toggleDoneButton,index) => {
+        toggleDone.forEach((toggleDoneButton, index) => {
             toggleDoneButton.addEventListener("click", () => {
                 toggleTaskDone(index);
             });

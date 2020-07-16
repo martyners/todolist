@@ -33,7 +33,7 @@
 }
 
 .list__button--done:hover {
-    background-color:  hsl(120, 100%, 37%);
+    background-color: hsl(120, 100%, 37%);
 }
 
 .list__button--remove {
@@ -43,4 +43,3 @@
 .list__button--remove:hover {
     background-color: hsl(0, 100%, 37%);
 }
-
