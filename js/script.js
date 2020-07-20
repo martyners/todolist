@@ -47,7 +47,7 @@
         </button>
         <p class="list__content"  ${task.done ? " style=\"text-decoration: line-through\"" : ""}>
         ${task.content}
-        <p>
+        </p>
         <button class="list__button list__button--remove js-removeButton">🗑
         </button>    
         </li>`
