@@ -41,16 +41,16 @@
         let htmlTaskList = "";
         for (const task of taskArray) {
             htmlTaskList += `
-        <li class="list__item">
-        <button class="list__button list__button--done js-doneButton">
-        ${task.done ? "✔" : ""}
-        </button>
-        <p class="list__content"  ${task.done ? " style=\"text-decoration: line-through\"" : ""}>
-        ${task.content}
-        </p>
-        <button class="list__button list__button--remove js-removeButton">🗑
-        </button>    
-        </li>`
+                <li class="list__item">
+                    <button class="list__button list__button--done js-doneButton">
+                        ${task.done ? "✔" : ""}
+                    </button>
+                    <p class="list__content"  ${task.done ? " style=\"text-decoration: line-through\"" : ""}>
+                        ${task.content}
+                    </p>
+                    <button class="list__button list__button--remove js-removeButton">🗑
+                    </button>    
+                </li>`
         };
         document.querySelector(".js-tasksList").innerHTML = htmlTaskList;
 
