@@ -1,21 +1,28 @@
 {
-    const taskArray = [
-    ];
+    let taskArray = [];
 
     const addNewTask = (newTaskContent) => {
-        taskArray.push({
-            content: newTaskContent,
-        });
+        taskArray = [
+            ...taskArray,
+            { content: newTaskContent },
+        ];
         render();
     };
 
     const removeTask = (index) => {
-        taskArray.splice(index, 1);
+        taskArray = [
+            ...taskArray.slice(0, index),
+            ...taskArray.slice(index + 1),
+        ];
         render();
     };
 
     const toggleTaskDone = (index) => {
-        taskArray[index].done = !taskArray[index].done;
+        taskArray = [
+            ...taskArray.slice(0, index),
+            { ...taskArray[index], done: !taskArray[index].done },
+            ...taskArray.slice(index + 1),
+        ];
         render();
     };
 
