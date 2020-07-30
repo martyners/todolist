@@ -10,8 +10,16 @@
     border-bottom: 3px solid #eee;
 }
 
+.list__item--hidden {
+    display: none;
+}
+
 .list__content {
     flex-grow: 1;
+}
+
+.list__content--done {
+    text-decoration: line-through;
 }
 
 @media (max-width: 767px) {
