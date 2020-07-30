@@ -1,14 +1,18 @@
 .buttons {
+    display: inline-block;
+    transform: scale(0.8);
     display: flex;
+    justify-content: flex-end;
     flex-wrap: wrap;
 }
 
 .buttons__button {
     color: teal;
-    background: transparent;
+    background: none;
     border: none;
     margin: 0 0 0 20px;
     transition: color 0.3s;
+
 }
 
 @media (max-width: 767px) {
