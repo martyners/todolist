@@ -1,6 +1,6 @@
 {
     let tasks = [];
-    let hideDoneTask = false;
+    let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
         tasks = [
@@ -28,7 +28,7 @@
     };
 
     const toggleHideDoneTask = () => {
-        hideDoneTask = !hideDoneTask;
+        hideDoneTasks = !hideDoneTasks;
         render();
     };
 
@@ -64,7 +64,7 @@
     const renderTasks = () => {
         const taskToHTML = task => `
                 <li class="
-                    list__item${task.done && hideDoneTask ? " list__item--hidden" : ""} js-tasks">
+                    list__item${task.done && hideDoneTasks ? " list__item--hidden" : ""} js-tasks">
                     <button class="list__button list__button--done js-done">
                         ${task.done ? "✔" : ""}
                     </button>
